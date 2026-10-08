@@ -1,0 +1,590 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+  <meta name="theme-color" content="#121418">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Сон">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="data:image/png;base64,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">
+  <link rel="apple-touch-icon" href="data:image/png;base64,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">
+  <title>Сон — трекер сна</title>
+  <style>
+    :root{
+      --bg:#121418;
+      --card:#1C1F26;
+      --surface:#262A33;
+      --text:#E7E9EE;
+      --muted:#9AA3B2;
+      --navy:#243E66;
+      --blue:#3E6499;
+      --deep:#243E66;
+      --rem:#4E6E95;
+      --core:#8E97A3;
+      --awake:#D5DAE1;
+      --line:#6E7787;
+      --good:#3E6B58;
+      --bad:#8A4E4E;
+      --soft:#20242c;
+      --nav-h:82px;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+      --shadow: 0 18px 50px rgba(0,0,0,.22);
+    }
+    *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+    html,body{margin:0;min-height:100%;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;-webkit-font-smoothing:antialiased}
+    body{min-height:100svh;overflow-x:hidden}
+    button,input{font:inherit;color:inherit}
+    button{border:0;background:none}
+    .app-shell{width:100%;min-height:100svh}
+    .phone{width:min(100%,390px);min-height:100svh;margin:0 auto;position:relative}
+    .app{padding:calc(env(safe-area-inset-top,0px) + 10px) 14px calc(var(--nav-h) + var(--safe-bottom) + 18px)}
+    .screen{display:none;animation:screenIn .36s cubic-bezier(.22,1,.36,1)}
+    .screen.active{display:block}
+    @keyframes screenIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .topbar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:8px 2px 12px}
+    .eyebrow{font-size:13px;color:var(--muted);margin-bottom:3px}
+    h1{font-size:34px;line-height:1.02;letter-spacing:-.04em;margin:0;font-weight:750}
+    h2{font-size:21px;line-height:1.12;letter-spacing:-.025em;margin:0;font-weight:720}
+    h3{font-size:16px;margin:0;font-weight:700}
+    .subtle{color:var(--muted)}
+    .tiny{font-size:12px;color:var(--muted)}
+    .muted-line{font-size:12px;color:var(--muted);line-height:1.35}
+    .card{background:var(--card);border-radius:26px;padding:16px;box-shadow:var(--shadow);margin-top:13px}
+    .card.soft{background:var(--surface);box-shadow:none}
+    .pressable{transition:transform .12s ease,opacity .2s ease}
+    .pressable:active,.tab:active,.seg-btn:active,.icon-btn:active{transform:scale(.98)}
+    .summary-hero{padding:18px}
+    .hero-head{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+    .date-label{font-size:13px;color:var(--muted);margin-top:4px}
+    .hero-duration{font-size:39px;line-height:1;letter-spacing:-.045em;font-weight:760;margin-top:13px}
+    .hero-meta{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:10px;font-size:13px}
+    .goal-chip{color:var(--muted)}
+    .status-good{color:#77A48D}
+    .status-bad{color:#B37A7A}
+    .score-pill{background:#232934;padding:8px 11px;border-radius:15px;font-size:12px;white-space:nowrap}
+    .stages-row{display:flex;gap:4px;height:18px;margin-top:16px;border-radius:999px;overflow:hidden;background:#2d323c}
+    .stage-seg{min-width:2px;transition:flex-basis .4s cubic-bezier(.22,1,.36,1)}
+    .stage-labels{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:9px}
+    .stage-item{font-size:10px;color:var(--muted);line-height:1.25}
+    .stage-dot{display:inline-block;width:7px;height:7px;border-radius:50%;margin-right:5px;vertical-align:1px}
+    .compare-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:15px}
+    .compare-card{background:#20242c;border-radius:18px;padding:11px;min-width:0}
+    .compare-card .label{font-size:10px;color:var(--muted);margin-bottom:6px}
+    .compare-card strong{display:block;font-size:14px;line-height:1.1}
+    .compare-card span{font-size:11px;color:var(--muted);display:block;margin-top:5px}
+    .pill-segment{display:grid;grid-template-columns:repeat(3,1fr);background:var(--surface);border-radius:999px;padding:3px;position:relative;margin-top:13px;min-height:46px}
+    .pill-indicator{position:absolute;inset:3px auto 3px 3px;width:calc((100% - 6px)/3);border-radius:999px;background:#304661;transition:transform .36s cubic-bezier(.22,1,.36,1)}
+    .seg-btn{position:relative;z-index:1;min-height:40px;border-radius:999px;font-size:13px;color:var(--muted);font-weight:650;transition:transform .12s ease,color .25s ease}
+    .seg-btn.active{color:var(--text)}
+    .empty{padding:30px 16px;text-align:center;background:var(--card);border-radius:26px;margin-top:13px}
+    .empty p{margin:0 0 14px;color:var(--muted);font-size:14px}
+    .primary-btn{width:100%;min-height:50px;border-radius:18px;background:#29456f;color:#EEF3FA;font-weight:700;box-shadow:0 10px 26px rgba(36,62,102,.22);transition:transform .12s ease,filter .2s ease,opacity .2s ease}
+    .primary-btn:active{transform:scale(.98)}
+    .secondary-btn{min-height:44px;border-radius:15px;padding:0 14px;background:#252A33;color:var(--text);font-weight:650}
+    .link-btn{color:#9FB6D5;font-weight:650;min-height:44px;padding:0 4px}
+    .section-title{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:10px}
+    .chart-wrap{position:relative;height:210px;margin-top:6px}
+    #chartSvg{width:100%;height:100%;display:block;overflow:visible}
+    .chart-tip{position:absolute;pointer-events:none;min-width:130px;max-width:180px;background:#262A33;border-radius:16px;padding:9px 10px;opacity:0;transform:translateY(5px);transition:opacity .16s ease,transform .16s ease;box-shadow:0 14px 30px rgba(0,0,0,.25);z-index:3}
+    .chart-tip.show{opacity:1;transform:none}
+    .bar-hit{transform-origin:bottom;animation:barIn .42s cubic-bezier(.22,1,.36,1) both}
+    @keyframes barIn{from{opacity:0;transform:scaleY(.15)}to{opacity:1;transform:scaleY(1)}}
+    #periodBlocks.refreshing{animation:periodFade .34s cubic-bezier(.22,1,.36,1)}
+    @keyframes periodFade{from{opacity:.3;transform:translateY(8px)}to{opacity:1;transform:none}}
+    .chart-axis-label{font-size:9px;fill:#6E7787}
+    .sleep-line{animation:lineDraw .55s cubic-bezier(.22,1,.36,1) both}
+    @keyframes lineDraw{from{stroke-dasharray:1 300;stroke-dashoffset:300;opacity:.25}to{stroke-dasharray:300 0;stroke-dashoffset:0;opacity:1}}
+.chart-tip strong{display:block;font-size:13px}
+    .chart-tip span{display:block;font-size:11px;color:var(--muted);margin-top:3px}
+    .avg-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+    .avg-main{background:#20242c;border-radius:18px;padding:12px}
+    .avg-main .label{font-size:10px;color:var(--muted)}
+    .avg-main .big{font-size:18px;font-weight:720;margin-top:5px}
+    .avg-main .spread{font-size:11px;color:var(--muted);margin-top:4px}
+    .stage-average-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-top:8px}
+    .stage-avg{background:#20242c;border-radius:17px;padding:10px}
+    .stage-avg .head{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted)}
+    .stage-avg .value{font-size:14px;font-weight:700;margin-top:5px}
+    .stage-avg .spread{font-size:10px;color:var(--muted);margin-top:3px}
+    .rel-list{display:flex;flex-direction:column;gap:8px}
+    .rel-row{background:#20242c;border-radius:17px;padding:10px 11px;display:grid;grid-template-columns:minmax(88px,1fr) auto;gap:8px;align-items:center}
+    .rel-row .name{font-size:12px;color:var(--muted)}
+    .rel-row .value{font-size:12px;font-weight:650;text-align:right}
+    .rel-row .small{font-size:10px;color:var(--muted);grid-column:1/-1;margin-top:-2px}
+    .trend-card{padding:17px}
+    .trend-verdict{display:inline-flex;align-items:center;min-height:30px;padding:0 10px;border-radius:999px;font-size:12px;font-weight:700;margin-top:8px;background:#232934}
+    .trend-verdict.good{color:#8DB29D;background:rgba(62,107,88,.16)}
+    .trend-verdict.bad{color:#C69090;background:rgba(138,78,78,.16)}
+    .trend-verdict.neutral{color:#B6BCC6}
+    .trend-note{font-size:11px;color:var(--muted);margin-top:6px}
+    .trend-lines{margin-top:10px;display:flex;flex-direction:column;gap:7px}
+    .trend-line{font-size:12px;line-height:1.3;color:#D7DBE2}
+    .disclaimer{text-align:center;font-size:10px;color:#727B89;padding:16px 8px 3px}
+    .record-date-card{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 17px}
+    .date-big{font-size:30px;letter-spacing:-.04em;font-weight:760}
+    .date-sub{font-size:12px;color:var(--muted);margin-top:3px}
+    .field-card{padding:16px;margin-top:12px}
+    .field-head{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:11px}
+    .duration-line{display:flex;align-items:center;gap:8px}
+    .quick-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+    .quick-input-wrap{position:relative}
+    .quick-input{width:100%;height:56px;border:0;border-radius:17px;background:#20242c;color:var(--text);padding:0 54px 0 16px;font:700 22px -apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;outline:none;box-shadow:none;-webkit-appearance:none;appearance:none}
+    .quick-input::placeholder{color:#66707F}
+    .quick-input:focus{background:#252A33;box-shadow:0 0 0 2px rgba(62,100,153,.34)}
+    .quick-unit{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:11px;color:var(--muted);font-weight:650;pointer-events:none}
+    .field-caption{font-size:10px;color:var(--muted);margin:0 0 7px 3px}
+    .field-note{font-size:11px;color:var(--muted);margin-top:9px;line-height:1.35}
+    .score-input-row{position:relative}
+    .score-input{padding-right:48px}
+    .stage-fields{display:flex;flex-direction:column;gap:8px}
+    .stage-field{display:grid;grid-template-columns:12px minmax(0,1fr) minmax(118px,136px);gap:9px;align-items:center;background:#20242c;border-radius:17px;padding:8px 9px 8px 11px;min-height:58px}
+    .stage-field .stage-name{font-size:13px}
+    .stage-time{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+    .stage-time-field{position:relative}
+    .stage-input{width:100%;height:42px;border:0;border-radius:13px;background:#292E38;color:#E7E9EE;padding:0 34px 0 9px;text-align:right;font:700 15px -apple-system,BlinkMacSystemFont,"SF Pro Text",sans-serif;outline:none;-webkit-appearance:none;appearance:none}
+    .stage-input:focus{background:#2D333E;box-shadow:0 0 0 2px rgba(62,100,153,.28)}
+    .stage-unit{position:absolute;right:9px;top:50%;transform:translateY(-50%);font-size:10px;color:var(--muted);pointer-events:none}
+    .check-line{margin-top:10px;font-size:11px;line-height:1.35;color:#AAB2BF}
+    .check-line.warn{color:#B99B9B}
+    .save-wrap{margin:14px 0 calc(18px + var(--safe-bottom));padding-top:2px}
+    .history-card{padding:16px}
+    .history-list{display:flex;flex-direction:column;gap:4px}
+    .history-row{display:grid;grid-template-columns:minmax(70px,1fr) auto;gap:10px;align-items:center;padding:11px 2px;border-bottom:1px solid transparent;border-radius:14px}
+    .history-row + .history-row{border-top:1px solid rgba(154,163,178,.06)}
+    .history-main{min-width:0}
+    .history-date{font-size:13px;font-weight:650}
+    .history-meta{display:flex;align-items:center;gap:7px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:4px}
+    .history-actions{display:flex;gap:4px}
+    .icon-btn{width:40px;height:40px;border-radius:13px;background:#20242c;color:#AAB2BF;transition:transform .12s ease}
+    .modal-backdrop{position:fixed;inset:0;background:rgba(8,9,12,.62);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);display:none;align-items:flex-end;justify-content:center;z-index:20;padding:12px}
+    .modal-backdrop.show{display:flex;animation:fadeIn .24s ease}
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+    .modal{width:min(100%,390px);background:#1C1F26;border-radius:27px;padding:16px;box-shadow:0 20px 70px rgba(0,0,0,.45);animation:sheetIn .32s cubic-bezier(.22,1,.36,1)}
+    @keyframes sheetIn{from{transform:translateY(24px);opacity:.7}to{transform:none;opacity:1}}
+    .modal h3{font-size:18px}
+    .modal p{font-size:13px;color:var(--muted);line-height:1.45;margin:7px 0 14px}
+    .modal-actions{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .date-input{width:100%;height:52px;background:#20242c;border:0;border-radius:17px;padding:0 14px;color:var(--text);outline:none;appearance:none;-webkit-appearance:none}
+    .toast{position:fixed;left:50%;bottom:calc(var(--nav-h) + var(--safe-bottom) + 12px);transform:translate(-50%,8px);opacity:0;background:#292D36;color:#E7E9EE;padding:10px 14px;border-radius:15px;font-size:12px;z-index:30;pointer-events:none;transition:opacity .18s ease,transform .18s ease;max-width:340px;text-align:center}
+    .toast.show{opacity:1;transform:translate(-50%,0)}
+    .tabbar{position:fixed;left:50%;transform:translateX(-50%);bottom:0;width:min(100%,390px);padding:8px 12px calc(8px + var(--safe-bottom));z-index:15;pointer-events:none}
+    .tabbar-inner{height:62px;border-radius:23px;background:rgba(28,31,38,.88);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);box-shadow:0 -2px 24px rgba(0,0,0,.24);display:grid;grid-template-columns:1fr 1fr;gap:3px;padding:4px;pointer-events:auto}
+    .tab{border-radius:19px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;color:#8F98A6;font-size:10px;font-weight:650;min-height:50px;transition:color .2s ease,transform .12s ease,background .2s ease}
+    .tab.active{color:#BBD0EA;background:#252F40}
+    .tab-icon{width:20px;height:20px;display:block}
+    .no-data{display:none}
+    @media (min-width:700px){
+      body{background:#0F1114}
+      .phone{background:var(--bg);box-shadow:0 0 80px rgba(0,0,0,.35)}
+    }
+    @media (max-width:360px){
+      h1{font-size:31px}.compare-grid{gap:6px}.stage-labels{gap:5px}.card{border-radius:24px;padding:14px}.summary-hero{padding:16px}.avg-grid{gap:6px}
+      .stage-field{grid-template-columns:10px minmax(0,1fr) minmax(108px,122px);padding:9px 7px 9px 9px}.stage-field .stage-name{font-size:12px}.stage-time{gap:5px}
+    }
+  </style>
+</head>
+<body>
+<div class="app-shell"><div class="phone">
+<main class="app" id="app">
+  <section class="screen active" id="screen-summary" aria-label="Сводка">
+    <div class="topbar"><div><div class="eyebrow">Трекер сна</div><h1>Сон</h1></div><div id="summaryIcon" aria-hidden="true"></div></div>
+    <div id="summaryContent"></div>
+  </section>
+
+  <section class="screen" id="screen-record" aria-label="Запись">
+    <div class="topbar"><div><div class="eyebrow">Одна ночь</div><h1>Запись</h1></div><div id="recordIcon" aria-hidden="true"></div></div>
+    <div id="recordContent"></div>
+  </section>
+</main>
+
+<nav class="tabbar" aria-label="Разделы">
+  <div class="tabbar-inner">
+    <button class="tab active" data-tab="summary" aria-label="Сводка"><span class="tab-icon moon-icon"></span><span>Сводка</span></button>
+    <button class="tab" data-tab="record" aria-label="Запись"><span class="tab-icon plus-icon"></span><span>Запись</span></button>
+  </div>
+</nav>
+</div></div>
+
+<div class="modal-backdrop" id="modal"><div class="modal" role="dialog" aria-modal="true">
+  <h3 id="modalTitle">Подтвердить</h3><p id="modalText"></p>
+  <div id="modalBody"></div>
+  <div class="modal-actions" id="modalActions"></div>
+</div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+(() => {
+  'use strict';
+
+  const STORAGE_KEY = 'sleep.nights.v1';
+  const PERIOD_KEY = 'sleep.period.v1';
+  const GOAL = 420; // Цель сна всегда 7 ч = 420 мин.
+  const POP = { // Коридоры стадий взрослого; доли deep/rem/core от TST.
+    deep:{opt:[15,20], corridor:[10,25]},
+    rem:{opt:[20,25], corridor:[15,30]},
+    core:{opt:[45,55], corridor:[40,60]},
+    awake:{opt:[0,5], corridor:[0,10]}
+  };
+  const COLORS = {deep:'#243E66',rem:'#4E6E95',core:'#8E97A3',awake:'#D5DAE1',line:'#6E7787'};
+  const STAGE_ORDER = ['deep','rem','core','awake'];
+  const STAGE_NAMES = {deep:'Глубокий',rem:'Быстрый',core:'Базовый',awake:'Бодрствование'};
+
+  const state = { tab:'summary', period:Number(localStorage.getItem(PERIOD_KEY)) || 14, editingId:null, formDate:null, formDuration:420, formScore:null, formStages:{awake:0,rem:0,core:0,deep:0}, justSaved:false };
+
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s ?? '').replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c]));
+  const pad = n => String(n).padStart(2,'0');
+  const fmtDateISO = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+  const parseISO = s => { const [y,m,d]=String(s).split('-').map(Number); return new Date(y,m-1,d); };
+  const todayISO = () => fmtDateISO(new Date());
+  const addDays = (iso,n) => { const d=parseISO(iso); d.setDate(d.getDate()+n); return fmtDateISO(d); };
+  const dateShort = iso => { const d=parseISO(iso); return `${d.getDate()} ${d.toLocaleDateString('ru-RU',{month:'short'}).replace('.','')}`; };
+  const dateLong = iso => parseISO(iso).toLocaleDateString('ru-RU',{day:'numeric',month:'long',year:'numeric'});
+  const minutes = (h,m) => Math.max(0, Math.round(Number(h||0)*60 + Number(m||0)));
+  const hm = min => { const m=Math.max(0,Math.round(Number(min)||0)); return `${Math.floor(m/60)} ч ${m%60} мин`; };
+  const hmShort = min => { const m=Math.max(0,Math.round(Number(min)||0)); if(m<60) return `${m} мин`; return `${Math.floor(m/60)} ч ${m%60? `${m%60} мин`:''}`.replace(/\s+$/,''); };
+  const signedMin = n => `${n>0?'+':''}${Math.round(n)} мин`;
+  const pct = n => `${Math.round(n)}%`;
+  const clamp = (v,a,b) => Math.max(a,Math.min(b,v));
+  const mean = arr => arr.length ? arr.reduce((a,b)=>a+b,0)/arr.length : null;
+  const median = arr => { if(!arr.length) return null; const a=[...arr].sort((x,y)=>x-y), m=Math.floor(a.length/2); return a.length%2 ? a[m] : (a[m-1]+a[m])/2; };
+  const quantile = (arr,q) => { if(!arr.length) return null; const a=[...arr].sort((x,y)=>x-y); const pos=(a.length-1)*q, b=Math.floor(pos), r=pos-b; return a[b+1]===undefined?a[b]:a[b]+r*(a[b+1]-a[b]); };
+  const iqr = arr => { const q1=quantile(arr,.25), q3=quantile(arr,.75); return q1==null?null:q3-q1; };
+  const sd = arr => { if(arr.length<2) return 0; const m=mean(arr); return Math.sqrt(arr.reduce((s,x)=>s+(x-m)**2,0)/arr.length); };
+  const formatMonthDay = iso => parseISO(iso).toLocaleDateString('ru-RU',{day:'numeric',month:'short'}).replace('.','');
+
+  function loadNights(){
+    try{
+      const raw=JSON.parse(localStorage.getItem(STORAGE_KEY)||'[]');
+      if(!Array.isArray(raw)) return [];
+      return raw.filter(isValidNight);
+    }catch{ return []; }
+  }
+  function isValidNight(n){
+    return n && typeof n.id==='string' && /^\d{4}-\d{2}-\d{2}$/.test(n.date) &&
+      Number.isFinite(Number(n.durationMin)) && Number(n.durationMin)>=0 && Number.isFinite(Number(n.awakeMin)) && Number(n.awakeMin)>=0 &&
+      Number.isFinite(Number(n.remMin)) && Number(n.remMin)>=0 && Number.isFinite(Number(n.coreMin)) && Number(n.coreMin)>=0 && Number.isFinite(Number(n.deepMin)) && Number(n.deepMin)>=0;
+  }
+  function saveNights(list){ localStorage.setItem(STORAGE_KEY,JSON.stringify(list)); }
+  function sortNights(list){ return [...list].sort((a,b)=>a.date<b.date?1:-1); }
+  function findByDate(date){ return loadNights().find(n=>n.date===date) || null; }
+
+  function nightDerived(n){
+    const deep=Number(n.deepMin)||0, rem=Number(n.remMin)||0, core=Number(n.coreMin)||0, awake=Number(n.awakeMin)||0;
+    const tst=rem+core+deep, duration=Number(n.durationMin)||0, tib=tst+awake, diff=duration-tst;
+    const durationUsed=duration;
+    const shares=tst>0 ? {deep:deep/tst*100,rem:rem/tst*100,core:core/tst*100,awake:tib>0?awake/tib*100:0} : {deep:null,rem:null,core:null,awake:tib>0?awake/tib*100:null};
+    return {deep,rem,core,awake,tst,tib,diff,durationUsed,shares};
+  }
+  function durationScore(min){ const d=Math.abs(min-GOAL); if(d<=15)return 100; if(d<=30)return 90; if(d<=45)return 75; if(d<=60)return 60; if(d<=90)return 40; if(d<=120)return 20; return 10; }
+  function stageScore(type,p){
+    if(p==null) return 0;
+    if(type==='awake'){
+      if(p<5) return 100;
+      if(p<=10) return 80;
+      return Math.max(0,80-4*(p-10));
+    }
+    const {opt,corridor}=POP[type];
+    if(p>=opt[0] && p<=opt[1]) return 100;
+    if(p>=corridor[0] && p<=corridor[1]){
+      const edge=p<opt[0]?corridor[0]:corridor[1], target=p<opt[0]?opt[0]:opt[1];
+      const span=Math.abs(target-edge)||1;
+      return 80+20*(1-Math.abs(p-target)/span);
+    }
+    const edge=p<corridor[0]?corridor[0]:corridor[1];
+    return Math.max(0,80-4*Math.abs(p-edge));
+  }
+  function nightIndex(n){
+    const d=nightDerived(n), s=d.shares;
+    return .35*durationScore(d.durationUsed)+.25*stageScore('deep',s.deep)+.20*stageScore('rem',s.rem)+.15*stageScore('awake',s.awake)+.05*stageScore('core',s.core);
+  }
+
+  function rangeDates(period){ const end=todayISO(); const start=addDays(end,-(period-1)); return {start,end}; }
+  function inRange(n,start,end){ return n.date>=start && n.date<=end; }
+  function periodData(period,offset=0){
+    const base=rangeDates(period); const start=addDays(base.start,-offset*period), end=addDays(base.end,-offset*period);
+    return {start,end,nights:sortNights(loadNights().filter(n=>inRange(n,start,end)))};
+  }
+  function personalCorridors(period){
+    const p=periodData(period,0), prior=loadNights().filter(n=>n.date<p.start && n.date<todayISO());
+    if(prior.length<7) return null;
+    const valid=prior.map(n=>nightDerived(n)).filter(d=>d.tst>0 && d.shares.deep!=null);
+    if(valid.length<7) return null;
+    const out={};
+    ['deep','rem','core','awake'].forEach(k=>{
+      const vals=valid.map(d=>d.shares[k]).filter(v=>v!=null);
+      if(vals.length<7){out[k]=null;return;}
+      const med=median(vals), spread=Math.max((iqr(vals)||0)*.5,3);
+      out[k]={median:med,low:med-spread,high:med+spread};
+    });
+    return out;
+  }
+
+  function durationStatus(min){ const delta=min-GOAL; if(Math.abs(delta)<=15)return {text:'у цели',class:'status-good'}; return delta<0?{text:'короче цели',class:'status-bad'}:{text:'длиннее цели',class:'status-bad'}; }
+  function corridorStatus(type,p){
+    if(p==null) return {text:'нет данных'};
+    if(type==='awake'){if(p<5)return {text:'в коридоре'}; if(p<=10)return {text:'в коридоре'}; return {text:'выше'};}
+    const [lo,hi]=POP[type].corridor; return p<lo?{text:'ниже'}:p>hi?{text:'выше'}:{text:'в коридоре'};
+  }
+  function personalStatus(pc,p){ if(!pc||p==null)return null; return p<pc.low?{text:'ниже ваших'}:p>pc.high?{text:'выше ваших'}:{text:'внутри ваших'}; }
+
+  function setIcon(el,kind){
+    if(kind==='moon') el.innerHTML=`<svg viewBox="0 0 48 48" width="38" height="38" aria-hidden="true"><defs><linearGradient id="mg" x1="0" x2="1"><stop stop-color="#3E6499"/><stop offset="1" stop-color="#243E66"/></linearGradient></defs><rect x="1" y="1" width="46" height="46" rx="15" fill="#1C1F26"/><path d="M29.7 10.8c-7.2.9-12.7 7.1-12.7 14.6 0 8 6.5 14.6 14.6 14.6 5.8 0 10.8-3.4 13.1-8.3-1.5.6-3.1.9-4.8.9-8.6 0-14.8-9.2-10.2-21.8Z" fill="url(#mg)"/><circle cx="14" cy="13" r="1.5" fill="#6E7787"/><circle cx="37" cy="10" r="1.1" fill="#A7B0BE"/></svg>`;
+    else el.innerHTML=`<svg viewBox="0 0 48 48" width="38" height="38" aria-hidden="true"><rect x="1" y="1" width="46" height="46" rx="15" fill="#1C1F26"/><circle cx="24" cy="24" r="13" fill="#243E66"/><path d="M24 17v14M17 24h14" stroke="#D5DAE1" stroke-width="2.5" stroke-linecap="round"/></svg>`;
+  }
+  document.querySelectorAll('.moon-icon').forEach(e=>e.innerHTML='<svg viewBox="0 0 24 24"><path d="M16.8 3.4A8.4 8.4 0 1 0 20.6 16 7 7 0 0 1 16.8 3.4Z" fill="currentColor"/><circle cx="6.1" cy="5.5" r="1" fill="currentColor"/></svg>');
+  document.querySelectorAll('.plus-icon').forEach(e=>e.innerHTML='<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.7" fill="currentColor" opacity=".95"/><path d="M12 8v8M8 12h8" stroke="#121418" stroke-width="1.8" stroke-linecap="round"/></svg>');
+  setIcon($('#summaryIcon'),'moon'); setIcon($('#recordIcon'),'plus');
+
+  function switchTab(tab){ state.tab=tab; document.querySelectorAll('.screen').forEach(s=>s.classList.toggle('active',s.id===`screen-${tab}`)); document.querySelectorAll('.tab').forEach(b=>b.classList.toggle('active',b.dataset.tab===tab)); if(tab==='summary') renderSummary(); else renderRecord(); }
+  document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>switchTab(b.dataset.tab)));
+
+  function renderSummary(){
+    const today=todayISO(), nights=sortNights(loadNights()), todayNight=nights.find(n=>n.date===today)||null, latest=nights[0]||null, focus=todayNight||latest;
+    if(!focus){
+      $('#summaryContent').innerHTML=`<div class="empty"><p>Пока нет записей о сне.</p><button class="primary-btn pressable" data-action="add-night">Добавить ночь</button></div><div class="disclaimer">Ориентир для взрослого, не диагноз</div>`; bindSummaryActions(); return;
+    }
+    const d=nightDerived(focus), latestLabel=todayNight?'Сегодня':`Последняя ночь · ${dateShort(focus.date)}`;
+    const avg14=periodData(14).nights;
+    let compare;
+    if(avg14.length>=3){
+      const avgDur=mean(avg14.map(n=>nightDerived(n).durationUsed));
+      const stageAvg=k=>mean(avg14.map(n=>nightDerived(n).shares[k]).filter(v=>v!=null));
+      compare=`<div class="compare-grid"><div class="compare-card"><div class="label">Длительность</div><strong>${hm(d.durationUsed)}</strong><span>${signedMin(d.durationUsed-avgDur)} к ср. 14 дн.</span></div><div class="compare-card"><div class="label">Глубокий</div><strong>${d.shares.deep==null?'—':pct(d.shares.deep)}</strong><span>${d.shares.deep==null||stageAvg('deep')==null?'—':`${(d.shares.deep-stageAvg('deep'))>0?'+':''}${(d.shares.deep-stageAvg('deep')).toFixed(1)} п.п.`}</span></div><div class="compare-card"><div class="label">Быстрый</div><strong>${d.shares.rem==null?'—':pct(d.shares.rem)}</strong><span>${d.shares.rem==null||stageAvg('rem')==null?'—':`${(d.shares.rem-stageAvg('rem'))>0?'+':''}${(d.shares.rem-stageAvg('rem')).toFixed(1)} п.п.`}</span></div></div>`;
+    } else compare=`<div class="muted-line" style="margin-top:14px">Пока сравниваю с целью и типичной нормой стадий.</div>`;
+    const delta=d.durationUsed-GOAL, durStatus=durationStatus(d.durationUsed);
+    $('#summaryContent').innerHTML=`
+      <div class="card summary-hero">
+        <div class="hero-head"><div><div class="eyebrow">${latestLabel}</div><div class="date-label">${dateLong(focus.date)}</div></div>${focus.score!=null?`<div class="score-pill">Балл ${Math.round(focus.score)}</div>`:''}</div>
+        <div class="hero-duration">${hm(d.durationUsed)}</div>
+        <div class="hero-meta"><span class="goal-chip">Цель 7 ч</span><span>·</span><span class="${durStatus.class}">${Math.abs(delta)<=15?'у цели':signedMin(delta)}</span></div>
+        ${stageBar(d)}
+        ${compare}
+      </div>
+      ${periodSegment()}
+      <div id="periodBlocks"></div>
+      <div class="disclaimer">Ориентир для взрослого, не диагноз</div>`;
+    bindSummaryActions(); renderPeriodBlocks();
+  }
+
+  function periodSegment(){
+    const labels=[[7,'7 дней'],[14,'14 дней'],[30,'30 дней']];
+    const idx=labels.findIndex(x=>x[0]===state.period); const shift=idx<0?1:idx;
+    return `<div class="pill-segment" id="periodSegment"><div class="pill-indicator" style="transform:translateX(${shift*100}%)"></div>${labels.map(([v,t])=>`<button class="seg-btn ${v===state.period?'active':''}" data-period="${v}">${t}</button>`).join('')}</div>`;
+  }
+  function stageBar(d){
+    const total=Math.max(1,d.tst);
+    const items=[['deep',d.deep],['rem',d.rem],['core',d.core],['awake',d.awake]];
+    const sum=items.reduce((s,x)=>s+x[1],0)||1;
+    return `<div class="stages-row">${items.map(([k,v])=>`<span class="stage-seg" style="flex:${v/sum};background:${COLORS[k]}"></span>`).join('')}</div><div class="stage-labels">${items.map(([k,v])=>`<div class="stage-item"><span class="stage-dot" style="background:${COLORS[k]}"></span>${STAGE_NAMES[k]}<br><strong style="color:#D9DEE7;font-weight:650">${hm(v)}</strong>${d.shares[k]!=null?`<br><span>${Math.round(d.shares[k])}%</span>`:''}</div>`).join('')}</div>`;
+  }
+  function bindSummaryActions(){
+    document.querySelectorAll('[data-action="add-night"]').forEach(b=>b.addEventListener('click',()=>{openNewRecord();switchTab('record');}));
+    document.querySelectorAll('[data-period]').forEach(b=>b.addEventListener('click',()=>{state.period=Number(b.dataset.period);localStorage.setItem(PERIOD_KEY,String(state.period));renderSummary();}));
+  }
+
+  function renderPeriodBlocks(){
+    const {start,end,nights}=periodData(state.period);
+    if(!nights.length){ $('#periodBlocks').innerHTML=`<div class="empty"><p>В этом периоде нет ночей.</p><button class="primary-btn" data-action="add-night">Добавить ночь</button></div>`; bindSummaryActions();return; }
+    const blocks=[];
+    blocks.push(chartCard(nights));
+    blocks.push(averagesCard(nights));
+    blocks.push(relativeCard(nights,state.period));
+    const trend=trendCard(state.period); if(trend) blocks.push(trend);
+    $('#periodBlocks').innerHTML=blocks.join('');
+    $('#periodBlocks').classList.remove('refreshing');
+    void $('#periodBlocks').offsetWidth;
+    $('#periodBlocks').classList.add('refreshing');
+    bindSummaryActions();
+    bindChart();
+  }
+
+  function chartCard(nights){
+    const points=[...nights].sort((a,b)=>a.date.localeCompare(b.date));
+    const w=340,h=220,pad={l:30,r:12,t:18,b:30}; const chartW=w-pad.l-pad.r,chartH=h-pad.t-pad.b;
+    const maxVal=Math.max(540,...points.map(n=>nightDerived(n).durationUsed+30));
+    const y=v=>pad.t+chartH*(1-v/maxVal);
+    const step=chartW/Math.max(points.length-1,1);
+    const coords=points.map((n,i)=>{const d=nightDerived(n);return {n,d,x:pad.l+(points.length===1?chartW/2:i*step),y:y(d.durationUsed)}});
+    const targetY=y(GOAL);
+    const smoothPath = pts => {
+      if(pts.length===0)return '';
+      if(pts.length===1)return `M ${pts[0].x.toFixed(1)} ${pts[0].y.toFixed(1)}`;
+      let path=`M ${pts[0].x.toFixed(1)} ${pts[0].y.toFixed(1)}`;
+      for(let i=1;i<pts.length;i++){
+        const p0=pts[i-1],p1=pts[i],cx=(p0.x+p1.x)/2;
+        path+=` C ${cx.toFixed(1)} ${p0.y.toFixed(1)}, ${cx.toFixed(1)} ${p1.y.toFixed(1)}, ${p1.x.toFixed(1)} ${p1.y.toFixed(1)}`;
+      }
+      return path;
+    };
+    const path=smoothPath(coords);
+    const area=points.length>1?`${path} L ${coords.at(-1).x.toFixed(1)} ${h-pad.b} L ${coords[0].x.toFixed(1)} ${h-pad.b} Z`:'';
+    const yLines=[0,120,240,420,540].filter(v=>v<=maxVal);
+    const grid=yLines.map(v=>`<line x1="${pad.l}" x2="${w-pad.r}" y1="${y(v)}" y2="${y(v)}" stroke="rgba(154,163,178,.10)" stroke-width="1"/>${v===420?`<line x1="${pad.l}" x2="${w-pad.r}" y1="${targetY}" y2="${targetY}" stroke="${COLORS.line}" stroke-width="1" stroke-dasharray="4 5"/>`:''}`).join('');
+    const yLabels=yLines.map(v=>`<text x="${pad.l-7}" y="${y(v)+4}" text-anchor="end" class="chart-axis-label">${v===420?'7 ч':v%60===0?v/60+' ч':''}</text>`).join('');
+    const labels=[];
+    points.forEach((n,i)=>{
+      if(points.length===1 || points.length<=7 || i===points.length-1 || (points.length>7&&points.length<=14&&i%2===0) || (points.length>14&&(i%5===0||i===points.length-1))) labels.push(`<text x="${coords[i].x.toFixed(1)}" y="${h-8}" text-anchor="middle" class="chart-label">${formatMonthDay(n.date)}</text>`);
+    });
+    const dots=coords.map((p,i)=>`<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="4.2" fill="#121418" stroke="${COLORS.deep}" stroke-width="1.8" data-date="${p.n.date}" class="line-hit"/>`).join('');
+    const scorePoints=points.filter(n=>n.score!=null).map(n=>{const i=points.findIndex(x=>x.date===n.date); return `${coords[i].x.toFixed(1)},${(pad.t+chartH*(1-n.score/100)).toFixed(1)}`;}).join(' ');
+    const scoreLine=points.filter(n=>n.score!=null).length>=2?`<polyline points="${scorePoints}" fill="none" stroke="#3E6499" stroke-width="1.1" opacity=".6" stroke-linecap="round" stroke-linejoin="round"/>`:'';
+    return `<div class="card"><div class="section-title"><h2>График ${state.period} дней</h2><span class="tiny">длительность сна</span></div><div class="chart-wrap"><svg id="chartSvg" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" role="img" aria-label="Линейный график длительности сна"><defs><linearGradient id="lineArea" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#243E66" stop-opacity=".24"/><stop offset="1" stop-color="#243E66" stop-opacity="0"/></linearGradient></defs>${grid}${yLabels}<line x1="${pad.l}" x2="${w-pad.r}" y1="${targetY}" y2="${targetY}" stroke="${COLORS.line}" stroke-width="1" stroke-dasharray="4 5"/><text x="${w-pad.r}" y="${targetY-6}" text-anchor="end" class="target-label">7 ч</text>${area?`<path d="${area}" fill="url(#lineArea)"/>`:''}<path d="${path}" fill="none" stroke="${COLORS.deep}" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" class="sleep-line"/>${scoreLine}${dots}${labels.join('')}</svg><div class="chart-tip" id="chartTip"></div></div></div>`;
+  }
+  function bindChart(){
+    const svg=$('#chartSvg'),tip=$('#chartTip'); if(!svg||!tip)return;
+    svg.querySelectorAll('.line-hit').forEach(el=>el.addEventListener('click',()=>{
+      const n=findByDate(el.dataset.date); if(!n)return; const d=nightDerived(n); tip.innerHTML=`<strong>${dateLong(n.date)}</strong><span>${hm(d.durationUsed)} · ${d.shares.deep==null?'—':Math.round(d.shares.deep)+'% глубокого'} · ${n.score!=null?'балл '+Math.round(n.score):'балла нет'}</span>`; tip.classList.add('show');
+      const r=svg.getBoundingClientRect(), er=el.getBoundingClientRect(); tip.style.left=clamp(er.left-r.left,0,Math.max(0,r.width-160))+'px'; tip.style.top=clamp(er.top-r.top-58,0,150)+'px';
+      setTimeout(()=>tip.classList.remove('show'),2600);
+    }));
+  }
+
+  function averagesCard(nights){
+    const arr=nights.map(n=>({n,d:nightDerived(n)}));
+    const avgDur=mean(arr.map(x=>x.d.durationUsed)); const spreadDur=sd(arr.map(x=>x.d.durationUsed));
+    const avgDelta=avgDur-GOAL; const avgScore=mean(arr.map(x=>x.n.score).filter(v=>v!=null));
+    const avgStage=k=>mean(arr.map(x=>x.d[k]).filter(v=>v!=null));
+    return `<div class="card"><div class="section-title"><h2>Средние за ${state.period} дней</h2><span class="tiny">${nights.length} ноч.</span></div><div class="avg-grid"><div class="avg-main"><div class="label">Длительность</div><div class="big">${hm(avgDur)}</div><div class="spread">обычно ± ${Math.round(spreadDur)} мин</div></div><div class="avg-main"><div class="label">От 7 ч</div><div class="big">${signedMin(avgDelta)}</div><div class="spread">обычно ± ${Math.round(sd(arr.map(x=>x.d.durationUsed-GOAL)))} мин</div></div><div class="avg-main"><div class="label">Балл</div><div class="big">${avgScore==null?'—':Math.round(avgScore)}</div><div class="spread">${avgScore==null?'нет данных':`обычно ± ${Math.round(sd(arr.map(x=>x.n.score).filter(v=>v!=null)))}.`}</div></div></div><div class="stage-average-grid">${[['deep','Глубокий'],['rem','Быстрый'],['core','Базовый'],['awake','Бодрствование']].map(([k,label])=>{const a=avgStage(k), vals=arr.map(x=>x.d.shares[k]).filter(v=>v!=null); const mins=mean(arr.map(x=>x.d[k])); return `<div class="stage-avg"><div class="head"><span class="stage-dot" style="background:${COLORS[k]}"></span>${label}</div><div class="value">${hm(mins)}${a!=null?` · ${Math.round(a)}%`:''}</div><div class="spread">обычно ± ${k==='awake'?Math.round(sd(arr.map(x=>x.d.awake))):Math.round(sd(arr.map(x=>x.d[k])))} мин</div></div>`}).join('')}</div></div>`;
+  }
+
+  function relativeCard(nights,period){
+    const arr=nights.map(n=>nightDerived(n)); const avgDur=mean(arr.map(d=>d.durationUsed)); const pc=personalCorridors(period);
+    const rows=[`<div class="rel-row"><div><div class="name">Длительность</div></div><div class="value ${Math.abs(avgDur-GOAL)<=15?'status-good':''}">${durationStatus(avgDur).text} · ${signedMin(avgDur-GOAL)}</div></div>`];
+    [['deep','Глубокий'],['rem','Быстрый'],['core','Базовый'],['awake','Бодрствование']].forEach(([k,label])=>{
+      const a=mean(arr.map(d=>d.shares[k]).filter(v=>v!=null)); if(a==null)return;
+      const stat=corridorStatus(k,a); const popCorr=k==='awake'?'ориентир <5%, приемлемо до 10%':`${POP[k].corridor[0]}–${POP[k].corridor[1]}%`;
+      let extra=`Популяционный коридор: ${popCorr}`; if(pc&&pc[k]){const ps=personalStatus(pc[k],a); extra=`Ваш коридор ${Math.round(pc[k].low)}–${Math.round(pc[k].high)}% · ${ps.text}; ${popCorr}`;}
+      rows.push(`<div class="rel-row"><div><div class="name">${label}</div></div><div class="value">${stat.text} · ${a.toFixed(1)}%</div><div class="small">${extra}</div></div>`);
+    });
+    return `<div class="card"><div class="section-title"><h2>Относительно цели и нормы</h2></div><div class="rel-list">${rows.join('')}</div></div>`;
+  }
+
+  function trendCard(period){
+    const cur=periodData(period,0), prev=periodData(period,1); if(cur.nights.length<3||prev.nights.length<3)return cur.nights.length<=2?`<div class="card trend-card"><h2>Тренд</h2><div class="trend-lines"><div class="trend-line">Тренд появится после 3 ночей, увереннее после 7.</div></div></div>`:'';
+    const c=calcWindow(cur.nights), p=calcWindow(prev.nights);
+    const diff=c.index-p.index; const verdict=diff>=5?'Улучшение':diff<=-5?'Спад':'Без изменений'; const cls=verdict==='Улучшение'?'good':verdict==='Спад'?'bad':'neutral';
+    const prelim=cur.nights.length<7||prev.nights.length<7?'предварительно':'по вашим данным';
+    const lines=[];
+    const cDist=Math.abs(c.avgDuration-GOAL),pDist=Math.abs(p.avgDuration-GOAL); if(cDist<pDist)lines.push(`Длительность ближе к 7 ч на ${Math.round(pDist-cDist)} мин.`); else if(cDist>pDist)lines.push(`Длительность дальше от 7 ч на ${Math.round(cDist-pDist)} мин.`);
+    [['deep','Глубокий'],['rem','Быстрый']].forEach(([k,label])=>{const a=c.stage[k],b=p.stage[k]; if(a==null||b==null)return; const opt=POP[k].opt; const scorePos=v=>v<opt[0]?v-opt[0]:v>opt[1]?v-opt[1]:0; const before=scorePos(b),after=scorePos(a); if(Math.abs(before)>0||Math.abs(after)>0){if(Math.abs(after)<Math.abs(before))lines.push(`${label} движется к оптимуму на ${(Math.abs(before)-Math.abs(after)).toFixed(1)} п.п.`); else if(Math.abs(after)>Math.abs(before))lines.push(`${label} дальше от оптимума на ${(Math.abs(after)-Math.abs(before)).toFixed(1)} п.п.`);}});
+    const baseInside=v=>v>=40&&v<=60; if(baseInside(c.stage.core)!==baseInside(p.stage.core)) lines.push(`Базовый сон: ${baseInside(c.stage.core)?'вошёл в':'вышел из'} коридора, ${c.stage.core.toFixed(1)}%.`);
+    if(c.stage.awake!=null&&p.stage.awake!=null){const dd=p.stage.awake-c.stage.awake;if(Math.abs(dd)>=1)lines.push(`Бодрствование ${dd>0?'ниже':'выше'} на ${Math.abs(dd).toFixed(1)} п.п.`);}
+    if(c.avgScore!=null&&p.avgScore!=null){const ds=c.avgScore-p.avgScore;if(Math.abs(ds)>=3)lines.push(`Балл ${ds>0?'вырос':'снизился'} на ${Math.abs(ds).toFixed(0)}.`);}
+    const sdDiff=sd(cur.nights.map(n=>nightDerived(n).durationUsed))-sd(prev.nights.map(n=>nightDerived(n).durationUsed)); if(Math.abs(sdDiff)>=20)lines.push(`Сон стал ${sdDiff<0?'ровнее':'менее ровным'}: разброс ${Math.abs(Math.round(sdDiff))} мин.`);
+    return `<div class="card trend-card"><div class="section-title"><h2>К прошлому такому же периоду</h2></div><div class="trend-verdict ${cls}">${verdict}</div><div class="trend-note">${prelim}</div><div class="trend-lines">${lines.slice(0,3).map(x=>`<div class="trend-line">${esc(x)}</div>`).join('') || '<div class="trend-line">Существенных сдвигов по правилам сравнения нет.</div>'}</div></div>`;
+  }
+  function calcWindow(nights){
+    const d=nights.map(n=>({n,d:nightDerived(n)})); const avgDuration=mean(d.map(x=>x.d.durationUsed)); const stage={}; ['deep','rem','core','awake'].forEach(k=>stage[k]=mean(d.map(x=>x.d.shares[k]).filter(v=>v!=null))); const avgScore=mean(d.map(x=>x.n.score).filter(v=>v!=null)); const index=mean(d.map(x=>nightIndex(x.n))); return {avgDuration,stage,avgScore,index};
+  }
+
+  function openNewRecord(date=todayISO()){
+    state.justSaved=false; state.editingId=null; state.formDate=date; const existing=findByDate(date); if(existing){loadForm(existing);} else {state.formDuration=420;state.formScore=null;state.formStages={awake:0,rem:0,core:0,deep:0};} renderRecord();
+  }
+  function loadForm(n){ const d=nightDerived(n); state.editingId=n.id; state.formDate=n.date; state.formDuration=n.durationMin;state.formScore=n.score;state.formStages={awake:n.awakeMin,rem:n.remMin,core:n.coreMin,deep:n.deepMin}; }
+  function renderRecord(){
+    const existing=state.formDate?findByDate(state.formDate):null; if(existing && !state.editingId && !state.justSaved) loadForm(existing); if(!state.formDate)state.formDate=todayISO();
+    const d={duration:state.formDuration,score:state.formScore,stages:state.formStages};
+    const tst=d.stages.deep+d.stages.rem+d.stages.core, diff=d.duration-tst; const check=Math.abs(diff)>15;
+    const daysTitle=state.formDate===todayISO()?'Сегодня':dateLong(state.formDate);
+    const labels=[['awake','Бодрствование'],['rem','Быстрый'],['core','Базовый'],['deep','Глубокий']];
+    const h=Math.floor(d.duration/60),m=d.duration%60;
+    $('#recordContent').innerHTML=`
+      <div class="card record-date-card"><div><div class="date-big">${dateShort(state.formDate)}</div><div class="date-sub">${daysTitle}${existing?' · сохранено':' · новая ночь'}</div></div><button class="link-btn pressable" id="changeDate">Изменить</button></div>
+      <div class="card field-card"><div class="field-head"><h2>Длительность сна</h2><span class="tiny" id="durationGoalNote">Цель 7 ч · ${Math.abs(d.duration-GOAL)<=15?'у цели':d.duration<GOAL?'до цели '+hmShort(GOAL-d.duration):'выше цели '+hmShort(d.duration-GOAL)}</span></div><div class="quick-grid"><div><div class="field-caption">Часы</div><div class="quick-input-wrap"><input id="durationHours" class="quick-input focus-select" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" value="${String(h).padStart(1,'0')}" aria-label="Часы сна"><span class="quick-unit">ч</span></div></div><div><div class="field-caption">Минуты</div><div class="quick-input-wrap"><input id="durationMinutes" class="quick-input focus-select" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" value="${String(m).padStart(2,'0')}" aria-label="Минуты сна"><span class="quick-unit">мин</span></div></div></div><div class="field-note">Введите часы и минуты. Время сна, не время в кровати.</div></div>
+      <div class="card field-card"><div class="field-head"><h2>Балл</h2><span class="tiny">Apple Health / часы</span></div><div class="score-input-row"><input id="scoreInput" class="quick-input score-input focus-select" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="3" value="${d.score==null?'':Math.round(d.score)}" placeholder="—" aria-label="Балл сна от 0 до 100"><span class="quick-unit">/ 100</span></div><div class="field-note">Можно оставить пустым. Этот балл не смешивается с итоговой математикой.</div></div>
+      <div class="card field-card"><div class="field-head"><h2>Стадии сна</h2><span class="tiny" id="tstLive">TST ${hm(tst)}</span></div><div class="stage-fields">${labels.map(([k,label])=>{const sh=Math.floor((Number(d.stages[k])||0)/60), sm=(Number(d.stages[k])||0)%60; return `<div class="stage-field"><span class="stage-dot" style="background:${COLORS[k]}"></span><span class="stage-name">${label}</span><div class="stage-time"><div class="stage-time-field"><input class="stage-input focus-select" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" value="${sh}" data-stage-hours="${k}" aria-label="${label}, часы"><span class="stage-unit">ч</span></div><div class="stage-time-field"><input class="stage-input focus-select" type="text" inputmode="numeric" pattern="[0-9]*" maxlength="2" value="${sm}" data-stage-minutes="${k}" aria-label="${label}, минуты"><span class="stage-unit">мин</span></div></div></div>`}).join('')}</div><div class="field-note">Введите часы и минуты для каждой стадии.</div><div class="check-line ${check?'warn':''}" id="stageCheck">${tst===0?'Стадии пока не заполнены.':`Быстрый + Базовый + Глубокий = ${hm(tst)} · введено ${hm(d.duration)} · расхождение ${Math.abs(diff)} мин.`}${check?' Сохранение не блокируется.':''}</div></div>
+      <div class="card history-card"><div class="section-title"><h2>Последние ночи</h2><span class="tiny">${loadNights().length}</span></div><div class="history-list">${renderHistoryRows()}</div></div>
+      <div class="save-wrap"><button class="primary-btn pressable" id="saveNight">Сохранить</button></div>`;
+    bindRecordActions();
+  }
+  function renderHistoryRows(){
+    const list=sortNights(loadNights()).slice(0,10); if(!list.length)return '<div class="muted-line">Пока нет сохранённых ночей.</div>';
+    return list.map(n=>{const d=nightDerived(n); return `<div class="history-row"><div class="history-main"><div class="history-date">${dateLong(n.date)}</div><div class="history-meta"><span>${hm(d.durationUsed)}</span><span>·</span><span>глубокий ${d.shares.deep==null?'—':Math.round(d.shares.deep)+'%'}</span>${n.score!=null?`<span>·</span><span>балл ${Math.round(n.score)}</span>`:''}</div></div><div class="history-actions"><button class="icon-btn" data-edit="${n.id}" aria-label="Изменить">✎</button><button class="icon-btn" data-delete="${n.id}" aria-label="Удалить">⌫</button></div></div>`}).join('');
+  }
+  function bindRecordActions(){
+    $('#changeDate')?.addEventListener('click',()=>openDatePicker());
+    $('#durationHours')?.addEventListener('input',()=>{
+      const h=clamp(parseDigits($('#durationHours').value),0,24);
+      state.formDuration=h*60+(state.formDuration%60);
+      if(state.formDuration>24*60) state.formDuration=24*60;
+      updateRecordLive();
+    });
+    $('#durationMinutes')?.addEventListener('input',()=>{
+      const m=clamp(parseDigits($('#durationMinutes').value),0,59);
+      state.formDuration=Math.floor(state.formDuration/60)*60+m;
+      updateRecordLive();
+    });
+    $('#scoreInput')?.addEventListener('input',()=>{
+      const raw=$('#scoreInput').value.trim();
+      state.formScore=raw===''?null:clamp(parseDigits(raw),0,100);
+    });
+    document.querySelectorAll('[data-stage-hours]').forEach(input=>input.addEventListener('input',()=>{
+      const key=input.dataset.stageHours;
+      const h=clamp(parseDigits(input.value),0,24);
+      const minsEl=document.querySelector(`[data-stage-minutes="${key}"]`);
+      const m=clamp(parseDigits(minsEl?.value||0),0,59);
+      state.formStages[key]=h*60+m;
+      updateRecordLive();
+    }));
+    document.querySelectorAll('[data-stage-minutes]').forEach(input=>input.addEventListener('input',()=>{
+      const key=input.dataset.stageMinutes;
+      const m=clamp(parseDigits(input.value),0,59);
+      const hoursEl=document.querySelector(`[data-stage-hours="${key}"]`);
+      const h=clamp(parseDigits(hoursEl?.value||0),0,24);
+      state.formStages[key]=h*60+m;
+      updateRecordLive();
+    }));
+    document.querySelectorAll('.focus-select').forEach(input=>input.addEventListener('focus',()=>{setTimeout(()=>input.select(),0)}));
+    document.querySelectorAll('.focus-select').forEach(input=>input.addEventListener('keydown',e=>{
+      if(e.key==='Enter'){e.preventDefault(); const all=[...document.querySelectorAll('.focus-select')]; const i=all.indexOf(e.currentTarget); if(all[i+1]) all[i+1].focus(); else $('#saveNight')?.focus();}
+    }));
+    $('#saveNight')?.addEventListener('click',saveForm);
+    document.querySelectorAll('[data-edit]').forEach(b=>b.addEventListener('click',()=>{const n=loadNights().find(x=>x.id===b.dataset.edit);if(!n)return;loadForm(n);renderRecord();}));
+    document.querySelectorAll('[data-delete]').forEach(b=>b.addEventListener('click',()=>confirmDelete(b.dataset.delete)));
+  }
+  function parseDigits(value){
+    const cleaned=String(value??'').replace(/\D/g,'');
+    return cleaned===''?0:Number(cleaned);
+  }
+  function updateRecordLive(){
+    const tst=state.formStages.deep+state.formStages.rem+state.formStages.core;
+    const diff=state.formDuration-tst;
+    const note=$('#durationGoalNote');
+    if(note) note.textContent='Цель 7 ч · '+(Math.abs(state.formDuration-GOAL)<=15?'у цели':state.formDuration<GOAL?'до цели '+hmShort(GOAL-state.formDuration):'выше цели '+hmShort(state.formDuration-GOAL));
+    const tstEl=$('#tstLive'); if(tstEl) tstEl.textContent='TST '+hm(tst);
+    const check=$('#stageCheck');
+    if(check){check.classList.toggle('warn',Math.abs(diff)>15);check.innerHTML=tst===0?'Стадии пока не заполнены.':`Быстрый + Базовый + Глубокий = ${hm(tst)} · введено ${hm(state.formDuration)} · расхождение ${Math.abs(diff)} мин.${Math.abs(diff)>15?' Сохранение не блокируется.':''}`;}
+  }
+
+  function openDatePicker(){
+    openModal('Выбрать дату','Новая запись сохраняется за выбранной календарной датой.','<input id="datePicker" class="date-input" type="date" value="'+esc(state.formDate||todayISO())+'">',[
+      {label:'Отмена',className:'secondary-btn',action:closeModal},{label:'Готово',className:'primary-btn',action:()=>{const v=$('#datePicker')?.value;if(v){state.formDate=v;const n=findByDate(v);n?loadForm(n):state.editingId=null;renderRecord();closeModal();}}}
+    ]);
+  }
+  function saveForm(){
+    const list=loadNights(), date=state.formDate||todayISO(), existing=list.find(n=>n.date===date);
+    const perform=()=>{const obj={id:existing?.id||`${Date.now()}-${Math.random().toString(16).slice(2)}`,date,durationMin:state.formDuration,score:state.formScore==null?null:clamp(Math.round(state.formScore),0,100),awakeMin:state.formStages.awake,remMin:state.formStages.rem,coreMin:state.formStages.core,deepMin:state.formStages.deep,updatedAt:new Date().toISOString()}; const next=existing?list.map(n=>n.id===existing.id?obj:n):[...list,obj];saveNights(next);state.justSaved=true;state.editingId=null;state.formDate=date;state.formDuration=420;state.formScore=null;state.formStages={awake:0,rem:0,core:0,deep:0};switchTab('summary');showToast(existing?'Ночь обновлена':'Ночь сохранена');};
+    if(existing){openModal('Обновить ночь?','На эту дату уже есть запись. Повторное сохранение заменит её текущие данные.',null,[{label:'Отмена',className:'secondary-btn',action:closeModal},{label:'Обновить',className:'primary-btn',action:()=>{closeModal();perform();}}]);}else perform();
+  }
+  function confirmDelete(id){
+    openModal('Удалить ночь?','Запись будет удалена из этого устройства.',null,[{label:'Отмена',className:'secondary-btn',action:closeModal},{label:'Удалить',className:'primary-btn',action:()=>{const next=loadNights().filter(n=>n.id!==id);saveNights(next);closeModal();renderRecord();renderSummary();showToast('Ночь удалена');}}]);
+  }
+  function openNewOrEditFromSummary(){openNewRecord();switchTab('record');}
+
+  function openModal(title,text,body,actions){ $('#modalTitle').textContent=title;$('#modalText').textContent=text||'';$('#modalBody').innerHTML=body||'';const c=$('#modalActions');c.innerHTML='';actions.forEach(a=>{const b=document.createElement('button');b.className=a.className||'secondary-btn';b.textContent=a.label;b.addEventListener('click',a.action);c.appendChild(b);});$('#modal').classList.add('show'); }
+  function closeModal(){$('#modal').classList.remove('show');$('#modalBody').innerHTML='';}
+  $('#modal').addEventListener('click',e=>{if(e.target.id==='modal')closeModal();});
+  function showToast(msg){const t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(showToast.t);showToast.t=setTimeout(()=>t.classList.remove('show'),1900);}
+
+  // Первичное отображение.
+  renderSummary();
+
+  // Оффлайн-режим: приложение полностью локальное, сервис-воркер — отдельным файлом sw.js.
+  if('serviceWorker' in navigator) window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));
+})();
+</script>
+</body>
+</html>
